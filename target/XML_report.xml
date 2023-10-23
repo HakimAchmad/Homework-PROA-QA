@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="56.835">
+    <testcase classname="Cart Product functionality" name="Ensure amount of card incremented when product added to cart" time="7.987">
+        <system-out><![CDATA[Given I am on logged account................................................passed
+When I add first product to cart............................................passed
+And I see initial amount....................................................passed
+And I add second product to cart............................................passed
+Then user verify amount of product in cart incremented......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Checkout product" name="User can checkout and payment product" time="7.642">
+        <system-out><![CDATA[Given I is on cart page.....................................................passed
+When I click checkout button................................................passed
+And I input identity........................................................passed
+And I tap continue button...................................................passed
+And I tap finish button.....................................................passed
+Then I is on checkout complete page.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Checkout product" name="User can not checkout and payment product" time="7.43">
+        <system-out><![CDATA[Given I is on cart page.....................................................passed
+When I click checkout button................................................passed
+And I input identity without postal code....................................passed
+And I Click Continue Button to next process.................................passed
+Then I get error message postal code is required............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login functionality" name="Ensure user successfully login" time="5.591">
+        <system-out><![CDATA[Given I am on the login page................................................passed
+When I input standard_user as username......................................passed
+And I input secret_sauce as password........................................passed
+And I click button login....................................................passed
+Then I verify "success" login success result................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login functionality" name="Ensure user successfully login 2" time="10.535">
+        <system-out><![CDATA[Given I am on the login page................................................passed
+When I input performance_glitch_user as username............................passed
+And I input secret_sauce as password........................................passed
+And I click button login....................................................passed
+Then I verify "success" login success result................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login functionality" name="Ensure user shows failed login error notification" time="5.484">
+        <system-out><![CDATA[Given I am on the login page................................................passed
+When I input  as username...................................................passed
+And I input secret_sauce as password........................................passed
+And I click button login....................................................passed
+Then I verify "blank_username" login failed result..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login functionality" name="Ensure user shows failed login error notification 2" time="5.546">
+        <system-out><![CDATA[Given I am on the login page................................................passed
+When I input standard_user as username......................................passed
+And I input  as password....................................................passed
+And I click button login....................................................passed
+Then I verify "blank_password" login failed result..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Logout" name="Logout Functionality" time="6.219">
+        <system-out><![CDATA[Given I am on logged account................................................passed
+When I Click Sidebar menu in top left corner................................passed
+And I click button logout...................................................passed
+Then I successfully to logout account.......................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
